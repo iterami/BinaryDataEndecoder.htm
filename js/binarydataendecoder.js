@@ -15,8 +15,8 @@ function encode(){
       btoa(document.getElementById('binary-data').value);
 }
 
-window.onload = function(e){
+function repo_init(){
     document.getElementById('binary-data').oninput = encode;
     document.getElementById('characters').oninput = decode;
     document.getElementById('type').onchange = encode;
-};
+}
