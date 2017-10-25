@@ -2,10 +2,17 @@
 
 function repo_init(){
     core_repo_init({
+      'events': {
+        'binary-data': {
+          'oninput': encode,
+        },
+        'characters': {
+          'oninput': encode,
+        },
+        'type': {
+          'onchange': encode,
+        },
+      },
       'title': 'BinaryDataEndecoder.htm',
     });
-
-    document.getElementById('binary-data').oninput = encode;
-    document.getElementById('characters').oninput = decode;
-    document.getElementById('type').onchange = encode;
 }
