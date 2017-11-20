@@ -6,9 +6,6 @@ function repo_init(){
         'binary-data': {
           'oninput': encode,
         },
-        'characters': {
-          'oninput': encode,
-        },
         'type': {
           'onchange': encode,
         },
