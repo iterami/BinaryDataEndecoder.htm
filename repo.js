@@ -2,15 +2,15 @@
 
 function decode(){
     try{
-        document.getElementById('binary-data').value = atob(document.getElementById('characters').value);
+        core_elements['binary-data'].value = globalThis.atob(core_elements['characters'].value);
 
     }catch(error){
-        document.getElementById('binary-data').value = '';
+        core_elements['binary-data'].value = '';
     }
 }
 
 function encode(){
-    document.getElementById('characters').value = btoa(document.getElementById('binary-data').value);
+    core_elements['characters'].value = globalThis.btoa(core_elements['binary-data'].value);
 }
 
 function repo_init(){
@@ -24,5 +24,9 @@ function repo_init(){
         },
       },
       'title': 'BinaryDataEndecoder.htm',
+      'ui-elements': [
+        'binary-data',
+        'characters',
+      ],
     });
 }
