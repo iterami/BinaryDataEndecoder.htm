@@ -2,21 +2,21 @@
 
 function decode(){
     try{
-        core_elements['binary-data'].value = globalThis.atob(core_elements['characters'].value);
+        core_elements.binary.value = globalThis.atob(core_elements.characters.value);
 
     }catch(error){
-        core_elements['binary-data'].value = '';
+        core_elements.binary.value = '';
     }
 }
 
 function encode(){
-    core_elements['characters'].value = globalThis.btoa(core_elements['binary-data'].value);
+    core_elements.characters.value = globalThis.btoa(core_elements.binary.value);
 }
 
 function repo_init(){
     core_repo_init({
       'events': {
-        'binary-data': {
+        'binary': {
           'oninput': encode,
         },
         'type': {
@@ -25,7 +25,7 @@ function repo_init(){
       },
       'title': 'BinaryDataEndecoder.htm',
       'ui-elements': [
-        'binary-data',
+        'binary',
         'characters',
       ],
     });
