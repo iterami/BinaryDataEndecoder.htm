@@ -4,7 +4,7 @@ function decode(){
     try{
         core_elements.binary.value = globalThis.atob(core_elements.characters.value);
 
-    }catch(error){
+    }catch{
         core_elements.binary.value = '';
     }
 }
