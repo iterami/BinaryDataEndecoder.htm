@@ -24,7 +24,7 @@ function repo_init(){
         },
       },
       'title': 'BinaryDataEndecoder.htm',
-      'ui-elements': [
+      'ui_elements': [
         'binary',
         'characters',
       ],
